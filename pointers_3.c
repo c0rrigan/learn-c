@@ -3,14 +3,15 @@
  *
  */
 #include <stdio.h>
+void printArray(int* ptr);
 
-printArray(int* ptr);
 void main(){
-
     int numbers[]={89,45,23,54};
     printArray(&numbers[0]);
 }
 
 void printArray(int *ptr){
-    printf("numbers[1]: %i",*ptr);
+    for(int i=0;i<4;i++){
+    printf("numbers[%i]: %i\n",i,*(ptr+i));
+    }
 }
